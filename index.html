@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Weather Now</h1>
+    <p class="subtitle">Get current weather by <strong>your location</strong> or <strong>search a city</strong>.</p>
+
+    <div class="controls">
+      <input id="cityInput" type="text" placeholder="Enter city name (e.g. Pune)" />
+      <button id="searchBtn">Search</button>
+      <button id="locBtn">Use My Location</button>
+    </div>
+
+    <div id="weatherCard" class="card hidden">
+      <div class="card-header">
+        <h2 id="locationName">—</h2>
+        <img id="weatherIcon" alt="" />
+      </div>
+
+      <div class="card-body">
+        <div class="row">
+          <div class="big">
+            <div id="temp">--°C</div>
+            <div id="desc" class="muted">—</div>
+          </div>
+          <div class="details">
+            <div>Feels: <span id="feels">--°C</span></div>
+            <div>Humidity: <span id="humidity">--%</span></div>
+            <div>Wind: <span id="wind">-- m/s</span></div>
+            <div>Pressure: <span id="pressure">-- hPa</span></div>
+          </div>
+        </div>
+
+        <div id="more" class="more muted"></div>
+      </div>
+    </div>
+
+    <div id="message" class="message muted"></div>
+
+    <footer>
+      <small>Built with OpenWeatherMap API. Replace <code>API_KEY</code> in <code>script.js</code>.</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
